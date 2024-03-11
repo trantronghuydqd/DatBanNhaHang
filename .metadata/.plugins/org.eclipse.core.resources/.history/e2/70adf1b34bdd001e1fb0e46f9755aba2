@@ -1,0 +1,161 @@
+package ui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.Color;
+
+public class Frm_TrangChu extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Frm_TrangChu frame = new Frm_TrangChu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Frm_TrangChu() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1444, 747);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel pnlheader = new JPanel();
+		pnlheader.setBackground(new Color(255, 213, 170));
+		pnlheader.setBounds(0, 0, 218, 708);
+		contentPane.add(pnlheader);
+		pnlheader.setLayout(null);
+		
+		JPanel pnlTrangChu = new JPanel();
+		pnlTrangChu.setBounds(0, 133, 218, 43);
+		pnlheader.add(pnlTrangChu);
+		pnlTrangChu.setLayout(null);
+		
+		JLabel lblTrangChu = new JLabel("Trang Chủ");
+		lblTrangChu.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTrangChu.setBounds(0, 0, 218, 43);
+		pnlTrangChu.add(lblTrangChu);
+		
+		JPanel pnlBan = new JPanel();
+		pnlBan.setLayout(null);
+		pnlBan.setBounds(0, 177, 218, 43);
+		pnlheader.add(pnlBan);
+		
+		JLabel lblBan = new JLabel("Bàn");
+		lblBan.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBan.setBounds(0, 0, 218, 43);
+		pnlBan.add(lblBan);
+		
+		JPanel pnlMon = new JPanel();
+		pnlMon.setLayout(null);
+		pnlMon.setBounds(0, 221, 218, 43);
+		pnlheader.add(pnlMon);
+		
+		JLabel lblMon = new JLabel("Món Ăn");
+		lblMon.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMon.setBounds(0, 0, 218, 43);
+		pnlMon.add(lblMon);
+		
+		JPanel pnlNhanVien = new JPanel();
+		pnlNhanVien.setLayout(null);
+		pnlNhanVien.setBounds(0, 266, 218, 43);
+		pnlheader.add(pnlNhanVien);
+		
+		JLabel lblNhanVien = new JLabel("Nhân Viên");
+		lblNhanVien.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNhanVien.setBounds(0, 0, 218, 43);
+		pnlNhanVien.add(lblNhanVien);
+		
+		JPanel pnlKhachHang = new JPanel();
+		pnlKhachHang.setLayout(null);
+		pnlKhachHang.setBounds(0, 310, 218, 43);
+		pnlheader.add(pnlKhachHang);
+		
+		JLabel lblKhachHang = new JLabel("Khách Hàng");
+		lblKhachHang.setHorizontalAlignment(SwingConstants.CENTER);
+		lblKhachHang.setBounds(0, 0, 218, 43);
+		pnlKhachHang.add(lblKhachHang);
+		
+		JPanel pnlHoaDon = new JPanel();
+		pnlHoaDon.setLayout(null);
+		pnlHoaDon.setBounds(0, 354, 218, 43);
+		pnlheader.add(pnlHoaDon);
+		
+		JLabel lblHoaDon = new JLabel("Hóa Đơn");
+		lblHoaDon.setHorizontalAlignment(SwingConstants.CENTER);
+		lblHoaDon.setBounds(0, 0, 218, 43);
+		pnlHoaDon.add(lblHoaDon);
+		
+		JPanel pnlChiTietHoaDon = new JPanel();
+		pnlChiTietHoaDon.setLayout(null);
+		pnlChiTietHoaDon.setBounds(0, 398, 218, 43);
+		pnlheader.add(pnlChiTietHoaDon);
+		
+		JLabel lblChiTietHoaDon = new JLabel("Chi Tiết Hóa Đơn");
+		lblChiTietHoaDon.setHorizontalAlignment(SwingConstants.CENTER);
+		lblChiTietHoaDon.setBounds(0, 0, 218, 43);
+		pnlChiTietHoaDon.add(lblChiTietHoaDon);
+		
+		JPanel pnlThongKe = new JPanel();
+		pnlThongKe.setLayout(null);
+		pnlThongKe.setBounds(0, 443, 218, 43);
+		pnlheader.add(pnlThongKe);
+		
+		JLabel lblThongKe = new JLabel("Thống Kê");
+		lblThongKe.setHorizontalAlignment(SwingConstants.CENTER);
+		lblThongKe.setBounds(0, 0, 218, 43);
+		pnlThongKe.add(lblThongKe);
+		
+		JPanel pnlKhuyenMai = new JPanel();
+		pnlKhuyenMai.setLayout(null);
+		pnlKhuyenMai.setBounds(0, 488, 218, 43);
+		pnlheader.add(pnlKhuyenMai);
+		
+		JLabel lblKhuyenMai = new JLabel("Khuyến Mãi");
+		lblKhuyenMai.setHorizontalAlignment(SwingConstants.CENTER);
+		lblKhuyenMai.setBounds(0, 0, 218, 43);
+		pnlKhuyenMai.add(lblKhuyenMai);
+		
+		JPanel pnlTaiKhoan = new JPanel();
+		pnlTaiKhoan.setLayout(null);
+		pnlTaiKhoan.setBounds(0, 532, 218, 43);
+		pnlheader.add(pnlTaiKhoan);
+		
+		JLabel lblTaiKhoan = new JLabel("Tài Khoản");
+		lblTaiKhoan.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTaiKhoan.setBounds(0, 0, 218, 43);
+		pnlTaiKhoan.add(lblTaiKhoan);
+		
+		JPanel pnl = new JPanel();
+		pnl.setBounds(218, 0, 1211, 43);
+		pnlheader.add(pnl);
+		
+		JLabel lblNewLabel = new JLabel("Vo Cong Tuan Anh");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(1237, 11, 181, 22);
+		contentPane.add(lblNewLabel);
+	}
+}

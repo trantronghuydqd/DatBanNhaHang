@@ -1,0 +1,110 @@
+package ui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+
+public class Frm_DangNhap extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtTaiKhoan;
+	private JPasswordField password;
+	private JButton btnQuenMK;
+	private JButton btnThoat;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Frm_DangNhap frame = new Frm_DangNhap();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Frm_DangNhap() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 583, 331);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblTaiKhoan = new JLabel("Mật Khẩu");
+		lblTaiKhoan.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblTaiKhoan.setBounds(285, 137, 87, 24);
+		contentPane.add(lblTaiKhoan);
+		
+		JLabel lblTaiKhoan_1 = new JLabel("Tài Khoản");
+		lblTaiKhoan_1.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblTaiKhoan_1.setBounds(285, 82, 87, 24);
+		contentPane.add(lblTaiKhoan_1);
+		
+		txtTaiKhoan = new JTextField();
+		txtTaiKhoan.setBounds(285, 106, 245, 20);
+		contentPane.add(txtTaiKhoan);
+		txtTaiKhoan.setColumns(10);
+		
+		password = new JPasswordField();
+		password.setBounds(285, 162, 245, 20);
+		contentPane.add(password);
+		
+		btnQuenMK = new JButton("Quên mật khẩu ?");
+		btnQuenMK.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnQuenMK.setBounds(394, 197, 136, 23);
+		contentPane.add(btnQuenMK);
+		
+		btnThoat = new JButton("   Thoát");
+		btnThoat.setIcon(new ImageIcon("D:\\HK2-N3\\PTUD\\QLNHDB\\QLDBNH\\img\\thoat.png"));
+		btnThoat.setForeground(new Color(255, 255, 255));
+		btnThoat.setBackground(new Color(255, 0, 0));
+		btnThoat.setBounds(285, 239, 89, 23);
+		contentPane.add(btnThoat);
+		
+		JButton btnngNhp = new JButton("Đăng nhập");
+		btnngNhp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnngNhp.setBackground(new Color(0, 0, 255));
+		btnngNhp.setForeground(new Color(255, 255, 255));
+		btnngNhp.setBounds(432, 239, 98, 23);
+		contentPane.add(btnngNhp);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 255, 255));
+		panel.setBounds(0, 0, 567, 52);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblTieuDeDN = new JLabel("Đăng Nhập");
+		lblTieuDeDN.setBounds(95, 0, 381, 50);
+		panel.add(lblTieuDeDN);
+		lblTieuDeDN.setBackground(new Color(0, 255, 255));
+		lblTieuDeDN.setForeground(new Color(0, 0, 255));
+		lblTieuDeDN.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTieuDeDN.setFont(new Font("Times New Roman", Font.BOLD, 24));
+	}
+}
